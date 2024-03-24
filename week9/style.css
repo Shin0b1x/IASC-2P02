@@ -1,0 +1,45 @@
+.webgl{
+
+    position:fixed;
+    top:0;
+    left:0;
+    outline: none;
+    z-index: -1;
+
+
+}
+h1{
+
+    color: rgb(0, 0, 0);
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(115, 18, 18, 0.497);
+
+    
+}
+
+#lil-gui-name-1{
+    color: red;
+}
+
+#lil-gui-name-2{
+    color: green;
+}
+
+#lil-gui-name-3 {
+    color: blue;
+}
+
+#lil-gui-name-5{
+    color:red;
+
+}
+
+#lil-gui-name-6{
+    color:green;
+
+}
+#lil-gui-name-7{
+    color: blue;
+
+}
