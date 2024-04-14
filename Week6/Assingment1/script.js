@@ -227,7 +227,7 @@ const animation = ()  =>
     sphere3.position.z = Math.tan(elapsedTime*1.2)*2
 
     // LightUpate
-       // console.log(camera.position)
+        console.log(camera.position)
    // helper.update()
 
     // CONTROLSS

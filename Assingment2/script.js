@@ -30,7 +30,7 @@ const sizes ={
 const canvas = document.querySelector('.webgl')
 //scene
 const scene = new THREE.Scene()
-scene.background = new THREE.Color('bisque')
+scene.background = new THREE.Color('black')
 
 
 //camera
@@ -67,9 +67,13 @@ controls.enableDamping = true
  * directional light
  ******/
 
-const directionalLight = new THREE.DirectionalLight(0x404040, 100)
+const directionalLight = new THREE.DirectionalLight('bisqu', 100)
 scene.add(directionalLight)
-//directionalLight.position.set(8.9, 0.9, 0)
+
+const directionalLight2 = new THREE.DirectionalLight('white', 20)
+scene.add(directionalLight2)
+directionalLight2.position.set(0, -25, 0)
+
 directionalLight.rotation.x = Math.random() *2* Math.PI
 directionalLight.rotation.y = Math.random() *2* Math.PI
 directionalLight.rotation.z = Math.random() *2* Math.PI
@@ -98,18 +102,20 @@ scene.add( light2 );
 const cubeGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5)
 // Material
 const redMaterial = new THREE.MeshStandardMaterial({
-    color: new THREE.Color('Red'),
+    color: new THREE.Color('purple'),
     side: THREE.DoubleSide,
     
 })
 
 const greenMaterial = new THREE.MeshStandardMaterial({
-    color : new THREE.Color('Green'),
-    side: THREE.DoubleSide
+    color : new THREE.Color('blue'),
+    side: THREE.DoubleSide,
+    
+    
 })
 
 const blueMaterial = new THREE.MeshStandardMaterial({
-    color : new THREE.Color('Blue'),
+    color : new THREE.Color('lime'),
     side: THREE.DoubleSide
 })
 
@@ -119,7 +125,7 @@ const drawCube = (i, material) =>
     cube.position.x = (Math.random()-0.5)*10
     cube.position.z = (Math.random()-0.5)*10
     cube.position.y = i -10
-
+    
     cube.rotation.x = Math.random() *2* Math.PI
     cube.rotation.y = Math.random() *2* Math.PI
     cube.rotation.z = Math.random() *2* Math.PI
@@ -142,9 +148,9 @@ let present = {}
 const uiobj = {
         text : '',
         textArray: [],
-        term1: 'dumbledore',
-        term2: 'hat',
-        term3: 'quirrell',
+        term1: 'pirates',
+        term2: 'zoro',
+        term3: 'luffy',
         rotateCamera: true
         
 
@@ -191,7 +197,7 @@ const findTerminParsedText = (term,material)=>
 
                // call draw cube function with connvv value
 
-               for (let a= 0; a<5 ; a++)
+               for (let a= 0; a<=40 ; a++)
                {
                 drawCube(n, material)
                }
@@ -204,7 +210,7 @@ const findTerminParsedText = (term,material)=>
 
 // load source text
 
-fetch("https://raw.githubusercontent.com/amephraim/nlp/master/texts/J.%20K.%20Rowling%20-%20Harry%20Potter%201%20-%20Sorcerer's%20Stone.txt")
+fetch("https://raw.githubusercontent.com/Shin0b1x/IASC-2P02/main/Assingment2/wano.txt")
     .then(response => response.text())
     .then((data) =>
     {
@@ -288,6 +294,7 @@ const animation = ()  =>
         camera.position.z = Math.cos(elapsedTime * 0.5)*17
     }
 
+    console.log(camera.position)
     // renderer
     renderer.render(scene, camera)
     //request next frame

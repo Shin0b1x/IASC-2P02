@@ -1,12 +1,13 @@
 /*body*/
 html{
-     background-color:antiquewhite;
+     background-color:rgb(116, 16, 143);
+     
 }
 body{
     margin:0 auto;
     width: 90%;
-    font-family: "Lucida Console", "Courier New", monospace;
     
+    color:rgb(183, 255, 0)
 }
 
 p{
@@ -17,9 +18,9 @@ p{
 
 /*header*/
 h1,h2{
-
+    font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
-    
+    color:rgb(48, 3, 48)
 }
 
 h1 {
@@ -82,23 +83,22 @@ ul > li {
     width:28%;
     margin-left: 36%;
     border-radius: 10px;
-    color:aqua;
+  
 }
 
-#parent1{
-    color:aqua;
-}
+
+
 
 #lil-gui-name-1{
-    color: red;
+    color: purple;
 }
 
 #lil-gui-name-2{
-    color: green;
+    color: blue;
 }
 
 #lil-gui-name-3 {
-    color: blue;
+    color: lime;
 }
 
 #lil-gui-name-5{

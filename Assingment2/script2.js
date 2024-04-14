@@ -68,10 +68,15 @@ controls.enableDamping = true
  * directional light
  ******/
 
-const directionalLight = new THREE.DirectionalLight(0x404040, 100)
+const directionalLight = new THREE.DirectionalLight('white', 40)
 directionalLight.castShadow=true
 scene.add(directionalLight)
-//directionalLight.position.set(8.9, 0.9, 0)
+
+const directionalLight2 = new THREE.DirectionalLight('red', 2)
+directionalLight2.castShadow=true
+scene.add(directionalLight2)
+directionalLight2.position.set(0, -29, 0)
+
 directionalLight.rotation.x = Math.random() *2* Math.PI
 directionalLight.rotation.y = Math.random() *2* Math.PI
 directionalLight.rotation.z = Math.random() *2* Math.PI
@@ -139,8 +144,6 @@ const drawCube = (i, material) =>
 
 
 
-
-
 /**
  * text parsers & ui
  */
@@ -150,16 +153,14 @@ let present = {}
 const uiobj = {
         text : '',
         textArray: [],
-        term1: 'dumbledore',
-        term2: 'hat',
-        term3: 'quirrell',
+        term1: 'straw',
+        term2: 'kaido',
+        term3: 'orochi',
         rotateCamera: true,
         animateBubbles: false
         
 
 }
-
-
 
 
 // text parsers
@@ -200,7 +201,7 @@ const findTerminParsedText = (term,material)=>
 
                // call draw cube function with connvv value
 
-               for (let a= 0; a<5 ; a++)
+               for (let a= 0; a<=30 ; a++)
                {
                 drawCube(n, material)
                }
@@ -213,7 +214,7 @@ const findTerminParsedText = (term,material)=>
 
 // load source text
 
-fetch("/Users/shin0b1/Documents/git/IASC-2P02/Assingment2/text.txt")
+fetch("https://raw.githubusercontent.com/Shin0b1x/IASC-2P02/main/Assingment2/wano.txt")
     .then(response => response.text())
     .then((data) =>
     {
@@ -236,15 +237,13 @@ const ui = new dat.GUI({
 
 //interaction folder
 
-
-
     //cubes Folder
 
     const cubesFolder = ui.addFolder('Filter terms')
 
     cubesFolder
         .add(redMaterial, 'visible')
-        .name(`${uiobj.term1}`)
+        .name('straw hat')
     cubesFolder
         .add(greenMaterial, 'visible')
         .name(`${uiobj.term2}`)
@@ -286,7 +285,6 @@ const animation = ()  =>
         }
     }
     */
-
     // CONTROLSS
 
     controls.update()
@@ -301,10 +299,6 @@ const animation = ()  =>
     renderer.render(scene, camera)
     //request next frame
     window.requestAnimationFrame(animation)
-
-   
-  
-
   
 }
 
