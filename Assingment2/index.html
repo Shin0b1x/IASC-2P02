@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+   
+    <title>Data Visualization</title>
+
+
+<!---css--->
+
+<link rel ="stylesheet" href="style.css">
+<!---THREE JS IMPORT MAP-->
+<script type="importmap">
+    {
+        "imports":{
+            "three": "https://ga.jspm.io/npm:three@0.158.0/build/three.module.js",
+            "OrbitControls": "https://ga.jspm.io/npm:three@0.158.0/examples/jsm/controls/OrbitControls.js",
+            "lil-gui": "https://ga.jspm.io/npm:lil-gui@0.19.1/dist/lil-gui.esm.js"
+        }
+    }
+</script>
+<!---DataViz1-->
+<script src="script.js" type="module"></script>
+
+
+<!---DataViz2-->
+<script src="script2.js" type="module"></script>
+
+
+</head>
+<body>
+   <h1>Data Visualization</h1>
+   <h2>HAMZA ADIL</h2>
+   
+   
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit pretium dui vel interdum. Aenean vitae enim accumsan, cursus turpis nec, hendrerit odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce tincidunt felis non massa commodo molestie. Maecenas sed feugiat ligula, et egestas enim. Nam interdum varius nunc id bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ac nulla vel nibh vestibulum sollicitudin. Vivamus semper tristique erat, eget rutrum turpis faucibus at. Curabitur porttitor pellentesque lectus, vitae molestie dui consequat vitae.</p>
+
+    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis cursus dictum porttitor. Suspendisse elementum sem sapien, ut varius odio ornare nec. Praesent pulvinar nunc vel lorem eleifend varius. Maecenas in dictum arcu. Mauris vehicula consectetur turpis ut rhoncus. Integer malesuada malesuada mi vel aliquam. Ut molestie commodo diam, id vulputate ex tempor eget.</p>
+    <!--dataViz 1-->
+
+    <div class ='canvas-container'>
+        <h2> Heros of Wano</h2>
+    <!--
+        <ul>
+            <li id = "red">Dumbledore</li>
+            <li id = "green">Hat</li>
+            <li id = "blue">Broom</li>
+         </ul>
+        -->     
+         <canvas class ="webgl"></canvas>
+         <div id="parent1"></div>   
+        <p> Left click and drag to rotate.
+            Right click and drag to move.
+            Scroll to zoom.
+        </p>
+    </div>
+
+    <p>Quisque a leo ultricies, viverra sapien quis, semper est. Quisque sed feugiat velit. Mauris rhoncus, leo vitae sodales mattis, neque erat cursus ipsum, sit amet fermentum tortor nibh at urna. Sed mollis leo eu orci pellentesque, et auctor lacus laoreet. Sed aliquam eget tellus blandit interdum. Nam sem est, congue in consectetur at, sodales ac nunc. Nunc egestas interdum felis, eget mattis sapien congue et. Ut bibendum ipsum a cursus congue. Ut ultrices lorem vitae accumsan condimentum.</p>
+
+    <p>Aenean nec nibh tincidunt, feugiat neque molestie, scelerisque metus. Integer est sem, porta at neque eget, lacinia imperdiet nisl. Suspendisse aliquet nec orci et condimentum. Donec id ligula vel mauris tempus elementum vitae in tellus. Phasellus purus erat, dictum non feugiat vitae, laoreet sit amet dui. Vivamus a mi in odio euismod maximus. Sed pretium sit amet turpis vel gravida. Nam vitae mauris sit amet arcu aliquam gravida. Nullam sollicitudin dui faucibus sem luctus, sed vestibulum arcu rhoncus. Mauris ac dolor scelerisque, rhoncus metus id, pharetra odio. Quisque porttitor odio arcu, a cursus urna semper quis. Nunc vehicula ex fringilla dui bibendum finibus. Fusce lobortis eget dui vel scelerisque. Sed tortor purus, scelerisque fermentum viverra vitae, rutrum sed libero. Quisque dignissim, libero vitae dictum sodales, justo metus dictum tellus, nec porta est sem id tortor. Donec malesuada rutrum aliquet.</p>
+    <!--DataViz 2-->
+
+    <div class ='canvas-container'>
+        <h2> Antagonists of Wano</h2>
+    <!--
+       
+        -->     
+         <canvas class ="webgl2"></canvas>
+         <div id="parent2"></div>   
+        <p> Left click and drag to rotate.
+            Right click and drag to move.
+            Scroll to zoom.
+        </p>
+    </div>
+
+    <p>Nullam a augue lacinia, mollis tortor et, cursus nibh. Aenean laoreet, elit eget sagittis tincidunt, nulla lacus ultrices libero, ac pulvinar lacus ex in urna. Etiam imperdiet placerat porta. Vestibulum at semper felis, sed aliquet metus. Sed lacinia justo eget eros pulvinar egestas. Ut a fringilla augue, at maximus justo. Donec dolor sem, tempus non arcu at, lacinia finibus risus.</p>
+
+   
+</body>
